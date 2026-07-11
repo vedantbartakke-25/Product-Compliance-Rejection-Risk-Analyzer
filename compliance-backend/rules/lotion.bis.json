@@ -1,0 +1,139 @@
+{
+  "category": "Moisturizing Cream/Lotion",
+  "standard": "BIS IS 6608:2004",
+  "version": "1.0",
+  "authority": "Bureau of Indian Standards",
+  "description": "BIS Standard for Skin Creams and Lotions. Includes analytical characteristics like pH limits, and maximum thresholds for heavy metals.",
+  "rules": [
+    {
+      "id": "LTN001",
+      "name": "Mercury Ban",
+      "target_code": "CAS-7439-97-6",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Mercury is strictly banned for use as a skin lightening or stabilizing agent in cosmetic creams/lotions under BIS regulations."
+    },
+    {
+      "id": "LTN002",
+      "name": "Lead Limit",
+      "target_code": "CAS-7439-92-1",
+      "type": "MAX_LIMIT",
+      "limit": 20,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Lead (Pb) impurity must not exceed 20 ppm in skin creams as per IS 6608."
+    },
+    {
+      "id": "LTN003",
+      "name": "Arsenic Limit",
+      "target_code": "CAS-7440-38-2",
+      "type": "MAX_LIMIT",
+      "limit": 2,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Arsenic (As) must not exceed 2 ppm in cosmetic skin creams/lotions."
+    },
+    {
+      "id": "LTN004",
+      "name": "Heavy Metals Cumulative Limit",
+      "type": "GROUP_MAX",
+      "targets": ["CAS-7439-92-1", "CAS-7440-38-2"],
+      "limit": 22,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Cumulative sum of Lead + Arsenic must not exceed 22 ppm in skin applications."
+    },
+    {
+      "id": "LTN005",
+      "name": "Minimum pH Level",
+      "target_code": "PARAM-PH",
+      "type": "MIN_LIMIT",
+      "limit": 4.0,
+      "unit": "%",  
+      "severity": "WARNING",
+      "description": "pH of the skin cream/lotion must not be lower than 4.0 to prevent skin barrier damage and irritation."
+    },
+    {
+      "id": "LTN006",
+      "name": "Maximum pH Level",
+      "target_code": "PARAM-PH",
+      "type": "MAX_LIMIT",
+      "limit": 9.0,
+      "unit": "%", 
+      "severity": "WARNING",
+      "description": "pH of the skin cream/lotion must not exceed 9.0 to maintain the acid mantle of the skin."
+    },
+    {
+      "id": "LTN007",
+      "name": "Preservatives Limit (Parabens)",
+      "target_code": "CAS-99-76-3",
+      "type": "MAX_LIMIT",
+      "limit": 0.4,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Paraben-based preservatives should not exceed 0.4% in leave-on cosmetic products."
+    },
+    {
+      "id": "LTN008",
+      "name": "Total Fragrance Limit",
+      "type": "GROUP_MAX",
+      "targets": ["FRAG-MIXTURE", "CAS-78-70-6", "CAS-5989-27-5"],
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "INFO",
+      "description": "Total fragrant compounds should generally not exceed 1.0% in leave-on facial and body lotions."
+    },
+    {
+      "id": "LTN009",
+      "name": "Stearic Acid Limit",
+      "target_code": "CAS-57-11-4",
+      "type": "MAX_LIMIT",
+      "limit": 20,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Stearic acid acts as an emulsifier and thickener, but exceeding 20% can cause severe skin irritation, physical hardening, and formulation failure."
+    },
+    {
+      "id": "LTN010",
+      "name": "Glycerin Limit",
+      "target_code": "CAS-56-81-5",
+      "type": "MAX_LIMIT",
+      "limit": 15,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Glycerin concentrations above 15% can cause excessive stickiness and paradoxically draw moisture out of the skin in dry environments."
+    },
+    {
+      "id": "LTN011",
+      "name": "Sodium Hydroxide Limit",
+      "target_code": "CAS-1310-73-2",
+      "type": "MAX_LIMIT",
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Sodium hydroxide is permitted in trace amounts for pH adjusting, but must not exceed 1% to prevent severe chemical burns."
+    },
+    {
+      "id": "LTN012",
+      "name": "Mineral Oil Limit",
+      "target_code": "CAS-8012-95-1",
+      "type": "MAX_LIMIT",
+      "limit": 40,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Excess mineral oil (above 40%) can lead to comedogenic effects and heavy greasiness in standard lotion formulations."
+    },
+    {
+      "id": "LTN013",
+      "name": "Cetyl Alcohol Limit",
+      "target_code": "CAS-36653-82-4",
+      "type": "MAX_LIMIT",
+      "limit": 8,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Cetyl alcohol should not exceed 8% to maintain stability without causing excessive waxy buildup on the skin."
+    }
+  ]
+}

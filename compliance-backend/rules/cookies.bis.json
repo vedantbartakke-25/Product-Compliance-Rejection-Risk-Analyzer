@@ -1,0 +1,109 @@
+{
+  "category": "Cookies & Biscuits",
+  "standard": "FSSAI 2.11.10",
+  "version": "2.0",
+  "authority": "FSSAI",
+  "description": "Food Safety and Standards Authority of India — Standards for Bakery Products (Cookies & Biscuits)",
+  "rules": [
+    {
+      "id": "CK001",
+      "name": "Trans Fat Limit",
+      "target_code": "PARAM-TRANSFAT",
+      "type": "MAX_LIMIT",
+      "limit": 2.0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Trans fat (TFA) must not exceed 2% of total fat content. FSSAI FSS Act 2006, Schedule 2.2.6."
+    },
+    {
+      "id": "CK002",
+      "name": "Aflatoxin B1 Limit",
+      "target_code": "CAS-1162-65-8",
+      "type": "MAX_LIMIT",
+      "limit": 1.0,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Aflatoxin B1 is a potent carcinogen. Maximum 1 ppm (mg/kg) in cereals and cereal-based products."
+    },
+    {
+      "id": "CK003",
+      "name": "Melamine Ban",
+      "target_code": "CAS-108-78-1",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Melamine is a nitrogen-rich compound banned from all food products under FSSAI regulations."
+    },
+    {
+      "id": "CK004",
+      "name": "Moisture Content",
+      "target_code": "PARAM-MOISTURE",
+      "type": "MAX_LIMIT",
+      "limit": 6.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Moisture must not exceed 6% for shelf stability and microbial safety."
+    },
+    {
+      "id": "CK005",
+      "name": "Acid Insoluble Ash",
+      "target_code": "PARAM-ASH",
+      "type": "MAX_LIMIT",
+      "limit": 0.1,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Acid insoluble ash must not exceed 0.1% — indicates processing quality."
+    },
+    {
+      "id": "CK006",
+      "name": "Lead Limit",
+      "target_code": "CAS-7439-92-1",
+      "type": "MAX_LIMIT",
+      "limit": 2.5,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Lead (Pb) in bakery products must not exceed 2.5 ppm as per FSSAI Heavy Metals Schedule."
+    },
+    {
+      "id": "CK007",
+      "name": "Arsenic Limit",
+      "target_code": "CAS-7440-38-2",
+      "type": "MAX_LIMIT",
+      "limit": 0.5,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Arsenic (As) must not exceed 0.5 ppm in bakery/cereal products — FSSAI Heavy Metals Schedule."
+    },
+    {
+      "id": "CK008",
+      "name": "Mercury Ban",
+      "target_code": "CAS-7439-97-6",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Mercury (Hg) is strictly banned in food products. Zero tolerance."
+    },
+    {
+      "id": "CK009",
+      "name": "Heavy Metals Cumulative Limit",
+      "type": "GROUP_MAX",
+      "targets": ["CAS-7439-92-1", "CAS-7440-38-2"],
+      "limit": 3.0,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Cumulative sum of Lead + Arsenic must not exceed 3.0 ppm in finished bakery products."
+    },
+    {
+      "id": "CK010",
+      "name": "Sulphur Dioxide / Preservatives",
+      "target_code": "CAS-7446-09-5",
+      "type": "MAX_LIMIT",
+      "limit": 100,
+      "unit": "ppm",
+      "severity": "WARNING",
+      "description": "Sulphur Dioxide used as preservative must not exceed 100 ppm in biscuits/cookies (FSSAI)."
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "category": "Body Spray / Deodorant / Perfume",
+  "standard": "BIS IS 8482:2007",
+  "version": "1.0",
+  "authority": "Bureau of Indian Standards",
+  "description": "BIS Standard for Aerosol Deodorants and Body Sprays. Includes limits for propellants impurities, heavy metals, and antimicrobial agents.",
+  "rules": [
+    {
+      "id": "DEO001",
+      "name": "Benzene Ban",
+      "target_code": "CAS-71-43-2",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Benzene is a known human carcinogen and is strictly banned as an impurity in aerosol propellants."
+    },
+    {
+      "id": "DEO002",
+      "name": "Methanol Limit",
+      "target_code": "CAS-67-56-1",
+      "type": "MAX_LIMIT",
+      "limit": 0.2,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Methanol (methyl alcohol) must not exceed 0.2% as an impurity in the denatured ethanol base to prevent systemic toxicity."
+    },
+    {
+      "id": "DEO003",
+      "name": "Triclosan Antimicrobial Limit",
+      "target_code": "CAS-3380-34-5",
+      "type": "MAX_LIMIT",
+      "limit": 0.3,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Triclosan used as an antibacterial agent in deodorants must not exceed 0.3%."
+    },
+    {
+      "id": "DEO004",
+      "name": "Lead Limit",
+      "target_code": "CAS-7439-92-1",
+      "type": "MAX_LIMIT",
+      "limit": 20,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Lead (Pb) impurity must not exceed 20 ppm in cosmetic sprays."
+    },
+    {
+      "id": "DEO005",
+      "name": "Arsenic Limit",
+      "target_code": "CAS-7440-38-2",
+      "type": "MAX_LIMIT",
+      "limit": 2,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Arsenic (As) impurity must not exceed 2 ppm."
+    },
+    {
+      "id": "DEO006",
+      "name": "Heavy Metals Cumulative Limit",
+      "type": "GROUP_MAX",
+      "targets": ["CAS-7439-92-1", "CAS-7440-38-2"],
+      "limit": 22,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Cumulative sum of Lead + Arsenic must not exceed 22 ppm."
+    },
+    {
+      "id": "DEO007",
+      "name": "Aluminum Chlorohydrate Limit",
+      "target_code": "CAS-1327-41-9",
+      "type": "MAX_LIMIT",
+      "limit": 25.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Aluminum Chlorohydrate (active antiperspirant ingredient) is typically limited to 25% in aerosol formulations."
+    },
+    {
+      "id": "DEO008",
+      "name": "Ethanol Content Limit",
+      "target_code": "CAS-64-17-5",
+      "type": "MAX_LIMIT",
+      "limit": 60.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Ethyl alcohol (denatured) in body sprays and perfumes should not exceed 60% for safe aerosol dispensing and flammability control."
+    },
+    {
+      "id": "DEO009",
+      "name": "Butane/Propellant Limit",
+      "target_code": "CAS-106-97-8",
+      "type": "MAX_LIMIT",
+      "limit": 40.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Butane/Isobutane propellant gas should not exceed 40% of the aerosol formulation to maintain safe internal pressure."
+    },
+    {
+      "id": "DEO010",
+      "name": "Total Fragrance Limit",
+      "type": "GROUP_MAX",
+      "targets": ["FRAG-MIXTURE", "CAS-78-70-6", "CAS-5989-27-5"],
+      "limit": 5.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Total fragrance compounds (including Linalool and Limonene) should not exceed 5% in deodorant/body spray formulations."
+    }
+  ]
+}

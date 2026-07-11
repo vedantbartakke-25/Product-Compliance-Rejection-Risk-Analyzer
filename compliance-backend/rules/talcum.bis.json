@@ -1,0 +1,129 @@
+{
+  "category": "Talcum Powder",
+  "standard": "BIS IS 1462:2019",
+  "version": "1.0",
+  "authority": "Bureau of Indian Standards",
+  "description": "BIS Standard for Talc used in Cosmetic Industry (Fourth Revision). Includes maximum limits for heavy metals and strict prohibition of Asbestos.",
+  "rules": [
+    {
+      "id": "TALC001",
+      "name": "Asbestos Ban",
+      "target_code": "CAS-1332-21-4",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Natural talcum deposits can contain asbestos, a known carcinogen. BIS IS 1462:2019 and FDA strictly ban asbestos in cosmetic talc. Zero tolerance."
+    },
+    {
+      "id": "TALC002",
+      "name": "Mercury Ban",
+      "target_code": "CAS-7439-97-6",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Mercury and its compounds are strictly banned in all cosmetics, including powders, under BIS, EU, and CDSCO regulations."
+    },
+    {
+      "id": "TALC003",
+      "name": "Lead Limit",
+      "target_code": "CAS-7439-92-1",
+      "type": "MAX_LIMIT",
+      "limit": 20,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Lead (Pb) impurity must not exceed 20 ppm in cosmetic powders as per BIS Heavy Metals Schedule."
+    },
+    {
+      "id": "TALC004",
+      "name": "Arsenic Limit",
+      "target_code": "CAS-7440-38-2",
+      "type": "MAX_LIMIT",
+      "limit": 2,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Arsenic (As) trace heavy metal limit in talcum powder must not exceed 2 ppm (2 mg/kg)."
+    },
+    {
+      "id": "TALC005",
+      "name": "Heavy Metals Cumulative Limit",
+      "type": "GROUP_MAX",
+      "targets": ["CAS-7439-92-1", "CAS-7440-38-2"],
+      "limit": 22,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Cumulative sum of Lead + Arsenic must not exceed 22 ppm to prevent dermal and systemic heavy metal burden."
+    },
+    {
+      "id": "TALC006",
+      "name": "Moisture Content (Loss on Drying)",
+      "target_code": "PARAM-MOISTURE",
+      "type": "MAX_LIMIT",
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Talc must have minimal moisture (Loss on Drying) to prevent microbial growth and powder clumping. Max 1.0%."
+    },
+    {
+      "id": "TALC007",
+      "name": "Crystalline Silica Limit",
+      "target_code": "CAS-14808-60-7",
+      "type": "MAX_LIMIT",
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Respirable silica poses an inhalation hazard. Cosmetic talc should contain less than 1.0% crystalline silica."
+    },
+    {
+      "id": "TALC008",
+      "name": "Parabens Limit",
+      "target_code": "CAS-99-76-3",
+      "type": "MAX_LIMIT",
+      "limit": 0.4,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Methylparaben / Propylparaben used as preservatives should not exceed 0.4% individually per EU Cosmetic Directive."
+    },
+    {
+      "id": "TALC009",
+      "name": "Total Fragrance Limit",
+      "type": "GROUP_MAX",
+      "targets": ["FRAG-MIXTURE", "CAS-78-70-6", "CAS-5989-27-5"],
+      "limit": 0.5,
+      "unit": "%",
+      "severity": "INFO",
+      "description": "Hypoallergenic and cosmetic powders should keep fragrance levels below 0.5% to avoid dermal irritation."
+    },
+    {
+      "id": "TALC010",
+      "name": "Cosmetic Talc Content (Minimum)",
+      "target_code": "CAS-14807-96-6",
+      "type": "MIN_LIMIT",
+      "limit": 95,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Cosmetic-grade hydrated magnesium silicate (talc) must constitute at least 95% of the powder formulation for purity compliance."
+    },
+    {
+      "id": "TALC011",
+      "name": "Zinc Oxide Absorbent Limit",
+      "target_code": "CAS-1314-13-2",
+      "type": "MAX_LIMIT",
+      "limit": 5.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Zinc oxide used as an absorbent should not exceed 5% in cosmetic talc formulations."
+    },
+    {
+      "id": "TALC012",
+      "name": "Magnesium Carbonate Limit",
+      "target_code": "CAS-546-93-0",
+      "type": "MAX_LIMIT",
+      "limit": 5.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Magnesium carbonate as an absorbent filler should not exceed 5% in cosmetic talcum powder."
+    }
+  ]
+}

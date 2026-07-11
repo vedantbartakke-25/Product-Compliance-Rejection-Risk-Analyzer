@@ -1,0 +1,129 @@
+{
+  "category": "Hair Oil",
+  "standard": "BIS IS 7123:2019",
+  "version": "1.0",
+  "authority": "Bureau of Indian Standards",
+  "description": "BIS Standard for Hair Oils (Type 1, 2, and 3). Includes analytical characteristics, heavy metal limits, and moisture checks.",
+  "rules": [
+    {
+      "id": "HO001",
+      "name": "Mercury Ban",
+      "target_code": "CAS-7439-97-6",
+      "type": "BANNED",
+      "limit": 0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Mercury and its compounds are strictly banned in cosmetics and hair oils under BIS and CDSCO."
+    },
+    {
+      "id": "HO002",
+      "name": "Lead Limit",
+      "target_code": "CAS-7439-92-1",
+      "type": "MAX_LIMIT",
+      "limit": 20,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Lead (Pb) must not exceed 20 ppm in hair oils as per BIS heavy metal guidelines."
+    },
+    {
+      "id": "HO003",
+      "name": "Arsenic Limit",
+      "target_code": "CAS-7440-38-2",
+      "type": "MAX_LIMIT",
+      "limit": 2,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Arsenic (As) must not exceed 2 ppm (2 mg/kg) in cosmetic hair oils."
+    },
+    {
+      "id": "HO004",
+      "name": "Heavy Metals Cumulative Limit",
+      "type": "GROUP_MAX",
+      "targets": ["CAS-7439-92-1", "CAS-7440-38-2"],
+      "limit": 22,
+      "unit": "ppm",
+      "severity": "CRITICAL",
+      "description": "Cumulative sum of Lead + Arsenic must not exceed 22 ppm."
+    },
+    {
+      "id": "HO005",
+      "name": "Moisture Content",
+      "target_code": "PARAM-MOISTURE",
+      "type": "MAX_LIMIT",
+      "limit": 5.5,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Moisture test limits must not exceed 5.5% as per BIS IS 7123:2019 to prevent rancidity."
+    },
+    {
+      "id": "HO006",
+      "name": "Acid Value",
+      "target_code": "PARAM-ACID-VALUE",
+      "type": "MAX_LIMIT",
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Acid value for Type 1 and Type 3 hair oils shall not be more than 1.0, to prevent irritation and ensure oil stability."
+    },
+    {
+      "id": "HO007",
+      "name": "Preservatives Limit",
+      "target_code": "CAS-99-76-3",
+      "type": "MAX_LIMIT",
+      "limit": 0.4,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Paraben-based preservatives should not exceed 0.4% in hair oils."
+    },
+    {
+      "id": "HO008",
+      "name": "Total Fragrance Limit",
+      "type": "GROUP_MAX",
+      "targets": ["FRAG-MIXTURE", "CAS-78-70-6", "CAS-5989-27-5"],
+      "limit": 1.0,
+      "unit": "%",
+      "severity": "INFO",
+      "description": "Total fragrant compounds should generally not exceed 1.0% in hair oils."
+    },
+    {
+      "id": "HO009",
+      "name": "Glycerin Limit",
+      "target_code": "CAS-56-81-5",
+      "type": "MAX_LIMIT",
+      "limit": 5.0,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "While glycerin helps with moisture, concentrations above 5% in hair oil can cause sticky buildup and dirt attraction."
+    },
+    {
+      "id": "HO010",
+      "name": "Base Oil Content (Minimum)",
+      "target_code": "PARAM-BASE-OIL",
+      "type": "MIN_LIMIT",
+      "limit": 85,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Base oil (Coconut, Olive, Mineral, or blended vegetable oils) must constitute at least 85% of the total formulation for Type 1 and Type 3 hair oils (BIS IS 7123:2019)."
+    },
+    {
+      "id": "HO011",
+      "name": "Herbal Extracts Limit",
+      "target_code": "PARAM-HERBAL-EXTRACT",
+      "type": "MAX_LIMIT",
+      "limit": 2.0,
+      "unit": "%",
+      "severity": "CRITICAL",
+      "description": "Herbal/botanical extracts should not exceed 2% of total formulation — excessive concentrations risk allergic reactions and formulation instability."
+    },
+    {
+      "id": "HO012",
+      "name": "Almond Oil Limit",
+      "target_code": "CAS-8007-69-0",
+      "type": "MAX_LIMIT",
+      "limit": 10,
+      "unit": "%",
+      "severity": "WARNING",
+      "description": "Secondary emollient oils like almond oil should not exceed 10% of the total hair oil formulation."
+    }
+  ]
+}
