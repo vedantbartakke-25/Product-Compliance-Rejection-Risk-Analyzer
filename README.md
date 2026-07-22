@@ -24,19 +24,6 @@ An automated compliance engine and virtual lab that:
 
 ---
 
-## 📸 Screenshots
-
-| Feature | Screenshot |
-|---------|------------|
-| **Product Compliance Dashboard** | <img src="assets/Landing.png" width="400" alt="Landing Page"> |
-| **New Evaluation Input** | <img src="assets/Input.png" width="400" alt="Evaluation Input">  |
-| **Compliance Results & Risk** | <img src="assets/Result.png" width="400" alt="Result Overview"> |
-| **Shelf Life Calculation** | <img src="assets/Input2.png" width="400" alt="Evaluation Input 2"> |
-| **Shelf Life Results** | <img src="assets/Result2.png" width="400" alt="Result Details"> |
-| **Shelf Life Analysis** | <img src="assets/Analysis.png" width="400" alt="Delta Analysis"> |
-
----
-
 ## 🏗️ Architecture
 
 ```
