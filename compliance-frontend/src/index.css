@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+@layer utilities {
+  .emerald-glow {
+      box-shadow: 0 0 20px rgba(14, 168, 121, 0.4);
+  }
+  .glow-primary {
+      box-shadow: 0 0 15px rgba(14, 168, 121, 0.3);
+  }
+}
